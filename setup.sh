@@ -80,6 +80,10 @@ fi
 if ! type_exists 'brew'; then
     e_header "Installing Homebrew..."
     ruby -e "$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"
+
+    #install important brew packages
+    brew install bash-completion wget mysql node redis lame mongodb sqlite tree
+
 fi
 
 
