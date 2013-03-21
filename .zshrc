@@ -7,18 +7,11 @@ ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="robbyrussell"
 
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
-# Comment this out to disable bi-weekly auto-update checks
+# Comment this out to disable weekly auto-update checks
 # DISABLE_AUTO_UPDATE="true"
-
-# Uncomment to change how many often would you like to wait before auto-updates occur? (in days)
-# export UPDATE_ZSH_DAYS=13
 
 # Uncomment following line if you want to disable colors in ls
 # DISABLE_LS_COLORS="true"
@@ -30,11 +23,29 @@ ZSH_THEME="robbyrussell"
 # COMPLETION_WAITING_DOTS="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git)
+plugins=(git osx rails sublime npm coffee cake)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/smlnj-110.75/bin/sml:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/share/npm/bin:/usr/local/bin:/usr/local/share/python:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/libexec:/Users/kamladi/.rvm/bin
+
+export PATH="/usr/local/bin:/usr/local/share/python:${PATH}"
+
+export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/share/npm/bin:$PATH"
+
+# SMLNJ path
+export PATH="/usr/local/smlnj-110.75/bin/sml:$PATH"
+
+# Node.JS path
+export NODE_PATH="/usr/local/lib/node"
+
+# Path addition added by MacPorts
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+
+# Sublime Text 2 is default editor
+export EDITOR='subl'
+
+# Add aliases.
+source ~/.aliases

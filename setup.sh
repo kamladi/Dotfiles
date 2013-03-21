@@ -1,6 +1,12 @@
-#!/bin/sh
-DOTFILES=${HOME}/dotfiles
 
+#!/bin/sh
+DOTFILES=~/dotfiles
+DOTFILES_OLD=~/dotfiles_old
+
+#create backup dotfiles folder if it doesn't exist
+if [[ ! -d $DOTFILES_OLD ]]; then
+    mkdir $DOTFILES_OLD
+fi
 
 # Header logging
 e_header() {
@@ -48,23 +54,13 @@ type_exists() {
 }
 
 link() {
-    # Force create/replace the symlink.
-    ln -fs "${DOTFILES}/${1}" "${HOME}/${2}"
-}
+    # Move existing dotfile to dotfiles_old directory
+    if [[ -f ~/${2} ]]; then
+        mv ~/${2} ${DOTFILES_OLD}/
+    fi
 
-# Create the necessary symbolic links between the `.dotfiles` and `HOME`
-# directory. The `bash_profile` sources other files directly from the
-# `.dotfiles` repository.
-mirrorfiles() {
-	link "bash/.bashrc"			".bashrc"
-	link "bash/.bash_aliases"	".bash_aliases"
-	link "bash/.bash_profile"	".bash_profile"
-	link "vim/"					".vim"
-	#link "gemrc"				".gemrc"
-	#link "rvmrc"				".rvmrc"
-	link "zsh/.zshrc"			".zshrc"
-
-	e_success "Dotfiles update complete!"
+    # Create new symlink.
+    ln -s ${DOTFILES}/${1} ~/${2}
 }
 
 # Before relying on Homebrew, check that packages can be compiled
@@ -82,7 +78,7 @@ if ! type_exists 'brew'; then
     ruby -e "$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"
 
     #install important brew packages
-    brew install bash-completion wget mysql node redis lame mongodb sqlite tree
+    brew install bash-completion wget mysql node redis lame mongodb sqlite tree zsh
 
 fi
 
@@ -96,12 +92,33 @@ if ! type_exists 'git'; then
 fi
 
 
-# Ask before potentially overwriting files
-seek_confirmation "Warning: This step may overwrite your existing dotfiles."
-if is_confirmed; then
-    mirrorfiles
-    source ${HOME}/.bash_profile
-else
-    printf "Aborting...\n"
-    exit 1
+# Setup Oh-My-Zsh if it isn't already present
+if [[ ! -d $DOTFILES/oh-my-zsh/ ]]; then
+    git clone http://github.com/michaeljsmalley/oh-my-zsh.git
+    # Uncomment this line if you want to restart with a clean oh-my-zsh template
+    # cp ${DOTFILES}/oh-my-zsh/templates/zshrc.zsh-template ${DOTFILES}/.zshrc
 fi
+
+# Set the default shell to zsh if it isn't currently set to zsh
+if [[ ! $(echo $SHELL) == $(which zsh) ]]; then
+    chsh -s $(which zsh)
+fi
+
+
+# Create the necessary symbolic links between the `.dotfiles` and `HOME`
+# directory. The `bash_profile` sources other files directly from the
+# `.dotfiles` repository.
+e_header "Installing Homebrew..."
+e_header "Note: Existing dotfiles are moved to ~/dotfiles_old."
+link ".bashrc"          ".bashrc"
+link ".aliases"         ".aliases"
+link ".bash_profile"    ".bash_profile"
+link ".vim"             ".vim"
+link ".vimrc"           ".vimrc"
+#link ".gemrc"          ".gemrc"
+#link ".rvmrc"          ".rvmrc"
+link ".zshrc"           ".zshrc"
+link "oh-my-zsh"        ".oh-my-zsh"
+
+e_success "Dotfiles update complete!"
+source ${HOME}/.bash_profile

@@ -1,4 +1,3 @@
-#!/bin/bash
 # bash_aliases
 
 alias smlnj='rlwrap /usr/local/smlnj-110.75/bin/sml'
@@ -18,7 +17,7 @@ alias ~='cd ~'
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias la="ls -a"
-alias prev='cd -'
+alias bk='cd -'
 function cdl { cd $1; ls;}
 function mcd() { mkdir -p "$1" && cd "$1"; }
 
