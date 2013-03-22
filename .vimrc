@@ -9,6 +9,15 @@ syntax enable
 colorscheme solarized
 set background=dark
 
+"" Pathogen setup
+execute pathogen#infect()
+
+"" NERDTREE Config
+"" Toggle NERDTREE with Ctrl-n
+map <C-n> :NERDTREEToggle<CR>
+""close vim if the only window left is NERDTREE
+"" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
 "" Vim UI
 set number 		"" show line numbers
 set cul			"" highlight current line
