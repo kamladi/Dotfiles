@@ -1,0 +1,9 @@
+[
+	{
+		"keys": ["super+l", "super+t"],
+		"context": [
+			{"key": "selector", "operator": "equal", "operand": "text.tex.latex"}
+		],
+		"command": "insert_snippet", "args": {"name":"Packages/User/Snippets/Text Typewriter.sublime-snippet"}
+	}
+]

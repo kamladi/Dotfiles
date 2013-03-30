@@ -1,7 +1,7 @@
-
 #!/bin/sh
 DOTFILES=~/dotfiles
 DOTFILES_OLD=~/dotfiles_old
+
 
 #create backup dotfiles folder if it doesn't exist
 if [[ ! -d $DOTFILES_OLD ]]; then
@@ -67,7 +67,7 @@ link() {
 if ! type_exists 'gcc'; then
     e_error "The XCode Command Line Tools must be installed first."
     printf "  Download them from: https://developer.apple.com/downloads\n"
-    printf "  Then run: bash ~/.dotfiles/bin/dotfiles\n"
+    printf "  Then run this setup script again.\n"
     exit 1
 fi
 
@@ -79,7 +79,6 @@ if ! type_exists 'brew'; then
 
     #install important brew packages
     brew install bash-completion wget mysql node redis lame mongodb sqlite tree zsh
-
 fi
 
 
@@ -115,8 +114,6 @@ link ".aliases"         ".aliases"
 link ".bash_profile"    ".bash_profile"
 link ".vim"             ".vim"
 link ".vimrc"           ".vimrc"
-#link ".gemrc"          ".gemrc"
-#link ".rvmrc"          ".rvmrc"
 link ".zshrc"           ".zshrc"
 link "oh-my-zsh"        ".oh-my-zsh"
 

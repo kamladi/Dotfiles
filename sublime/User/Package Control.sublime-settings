@@ -1,0 +1,28 @@
+{
+	"installed_packages":
+	[
+		"Alignment",
+		"CoffeeScript",
+		"Emmet",
+		"FileDiffs",
+		"Gist",
+		"Git",
+		"HTML5",
+		"Jinja2",
+		"jQuery",
+		"LaTeXTools",
+		"Nettuts+ Fetch",
+		"Package Control",
+		"Prefixr",
+		"SFTP",
+		"SML (Standard ML)",
+		"Solarized Color Scheme",
+		"SublimeCodeIntel",
+		"sublimelint",
+		"SublimeREPL",
+		"SystemVerilog",
+		"Tag",
+		"Terminal",
+		"Theme - Soda"
+	]
+}

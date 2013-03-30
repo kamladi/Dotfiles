@@ -1,11 +1,11 @@
 # Kedar Amladi's Dotfiles (Work in Progress)
 
 ## How to Install
-Note: this installation will overwrite existing dotfiles in your `$HOME` and `.vim` directories.
+Note: this installation will replace existing dotfiles in your `$HOME` and `.vim` directories, moving any existing dotfiles to a `dotfiles_old` folder.
 
 * Download this repo
-* edit/replace the dotfiles with your own stchuff
-* run `setup.sh` from the command line
+* edit/replace dotfiles with your own schtuff
+* run `./setup.sh` from the command line
 
 ## TODO:
 * Add proper Homebrew/NPM setup, installing required packages (node, mongodb, wget, tree, etc.)

@@ -5,10 +5,11 @@ alias sml='smlnj'
 
 #folder/remote server shortcuts
 CMU="/Users/kamladi/Dropbox/CMU"
-alias cmu='cd $CMU'
-SOPH='cd $CMU/Soph\ Spring/'
+alias cmu="cd $CMU"
+SOPH="$CMU/Soph Spring"
 UNIX="kamladi@unix.andrew.cmu.edu"
 ECE="kamladi@ece005.ece.cmu.edu"
+150="$CMU/Soph Spring/15-150"
 
 #filesystem shortcuts
 alias ..='cd ..'

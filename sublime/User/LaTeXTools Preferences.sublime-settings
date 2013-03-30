@@ -1,0 +1,4 @@
+{
+	// switch focus to Skim after building
+	"keep_focus":	false
+}
