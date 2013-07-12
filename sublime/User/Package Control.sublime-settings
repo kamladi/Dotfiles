@@ -2,18 +2,31 @@
 	"installed_packages":
 	[
 		"Alignment",
+		"Backbone.js",
 		"CoffeeScript",
+		"Display Functions (Java)",
+		"DocBlockr",
+		"eco",
 		"Emmet",
 		"FileDiffs",
 		"Gist",
 		"Git",
+		"GitGutter",
+		"Handlebars",
 		"HTML5",
+		"Jade",
+		"Jade Snippets",
 		"Jinja2",
 		"jQuery",
+		"JSLint",
 		"LaTeXTools",
+		"MacTerminal",
 		"Nettuts+ Fetch",
+		"Origami",
 		"Package Control",
+		"Papyrus Assembly",
 		"Prefixr",
+		"Require Node.js Modules Helper",
 		"SFTP",
 		"SML (Standard ML)",
 		"Solarized Color Scheme",
@@ -23,6 +36,8 @@
 		"SystemVerilog",
 		"Tag",
 		"Terminal",
-		"Theme - Soda"
+		"Theme - Flatland",
+		"Theme - Soda",
+		"Tomorrow Color Schemes"
 	]
 }

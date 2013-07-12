@@ -45,7 +45,10 @@ export NODE_PATH="/usr/local/lib/node"
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 
 # Sublime Text 2 is default editor
-export EDITOR='subl'
+export EDITOR='vim'
 
 # Add aliases.
 source ~/.aliases
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"

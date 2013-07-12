@@ -1,9 +1,16 @@
 [
+	// keyboard shortcut for \texttt{} mode in Latex
 	{
-		"keys": ["super+l", "super+t"],
+		"keys": ["super+l", "super+t"], "command": "insert_snippet", "args": {"name":"Packages/User/Snippets/Text Typewriter.sublime-snippet"},
 		"context": [
 			{"key": "selector", "operator": "equal", "operand": "text.tex.latex"}
-		],
-		"command": "insert_snippet", "args": {"name":"Packages/User/Snippets/Text Typewriter.sublime-snippet"}
-	}
+		]
+	},
+	// re-map keyboard column selection from ctrl-shift-up/down
+	{ "keys": ["super+shift+up"], "command": "select_lines", "args": {"forward": false} },
+	{ "keys": ["super+shift+down"], "command": "select_lines", "args": {"forward": true} },
+	// change keyboard shortcut for block comment
+	{ "keys": ["super+shift+/"], "command": "toggle_comment", "args": { "block": true } },
+	//remap goto line
+	{ "keys": ["super+alt+l"], "command": "show_overlay", "args": {"overlay": "goto", "text": ":"} }
 ]

@@ -10,8 +10,9 @@ SOPH="$CMU/Soph Spring"
 UNIX="kamladi@unix.andrew.cmu.edu"
 ECE="kamladi@ece005.ece.cmu.edu"
 150="$CMU/Soph Spring/15-150"
+240="$SOPH/18-240"
 
-#filesystem shortcuts
+# filesystem shortcuts
 alias ..='cd ..'
 alias ...='cd ../../'
 alias ~='cd ~'
@@ -22,7 +23,7 @@ alias bk='cd -'
 function cdl { cd $1; ls;}
 function mcd() { mkdir -p "$1" && cd "$1"; }
 
-#misc aliases
+# misc aliases
 alias myip='curl ip.appspot.com'
 alias please="sudo"
 alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1]);"'
@@ -32,8 +33,8 @@ alias ccat='pygmentize -O bg=dark'
 alias stfu="osascript -e 'set volume output muted true'"
 alias pumpit="osascript -e 'set volume 7'"
 
-#run a local server at the current directory
-serve(){
+# run a local server at the current directory
+webserver(){
 	if [ -z "$1" ]
 	then
 		port=80
@@ -43,7 +44,7 @@ serve(){
  	python -m SimpleHTTPServer $port
 }
 
-#merge multiple PDFs to one PDF file
+# merge multiple PDFs to one PDF file
 pdfmerge()
 {
   tomerge="";
@@ -53,7 +54,7 @@ pdfmerge()
   pdftk $tomerge cat output mergd.pdf;
 }
 
-#download youtube video to mp3 audio file
+# download youtube video to mp3 audio file
 mp3() {
   youtube-dl $1 --extract-audio --title --audio-format mp3
 }
@@ -69,3 +70,9 @@ alias gc="git commit -m "
 alias gpom='git push origin master'
 alias gdiff='git diff|tig'
 alias pubkey="more ~/.ssh/id_rsa.public | pbcopy | echo '=> Public key copied to pasteboard.'"
+
+# python webapp aliases
+alias runserver="python manage.py runserver"
+alias syncdb="python manage.py syncdb"
+# virtualenv command shortcut
+alias sourceproj="source venv/bin/activate"
