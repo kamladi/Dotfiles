@@ -61,9 +61,6 @@ export PATH="/Applications/MATLAB_R2013a.app/bin:$PATH"
 export JAVA_HOME=$(/usr/libexec/java_home)
 export EC2_HOME=/usr/local/ec2-api-tools-1.6.12.2
 export PATH=$PATH:$EC2_HOME/bin
-export AWS_ACCESS_KEY="AKIAICRD37SUYSJDJWGQ"
-export AWS_SECRET_KEY="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"
-export EC2_URL=https://ec2.us-west-2.amazonaws.com
 
 # Add aliases.
 source ~/.aliases
