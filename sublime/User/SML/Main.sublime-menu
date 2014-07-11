@@ -14,7 +14,7 @@
                  "args": {
                     "type": "subprocess",
                     "encoding": "utf8",
-                    "cmd": ["rlwrap /usr/local/smlnj-110.75/bin/sml"/*, "$file"*/],
+                    "cmd": ["echo 'CM.make \"sources.cm\";' | rlwrap /usr/local/smlnj/bin/sml"/*, "$file"*/],
                     "cwd": "$file_path",
                     "syntax": "Packages/SML (Standard ML)/sml.tmLanguage",
                     "external_id": "sml",

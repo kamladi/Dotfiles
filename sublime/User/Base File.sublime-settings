@@ -1,0 +1,4 @@
+{
+	//hitting enter after double slash should NOT add another double slahs comment
+	"jsdocs_extend_double_slash": false,
+}

@@ -1,6 +1,6 @@
 {
 	"auto_complete_commit_on_tab": true,
-	"color_scheme": "Packages/Tomorrow Color Schemes/Tomorrow-Night-Eighties.tmTheme",
+	"color_scheme": "Packages/User/Tomorrow-Night-Eighties (SL).tmTheme",
 	"detect_slow_plugins": false,
 	"ensure_newline_at_eof_on_save": true,
 	"font_face": "Source Code Pro",
@@ -12,8 +12,17 @@
 	"highlight_line": true,
 	"ignored_packages":
 	[
+		"SublimeCodeIntel",
+		"sublimelint",
+		"Solarized Color Scheme",
+		"Papyrus Assembly",
 		"Vintage",
-		"JSLint"
+		"LESS-build",
+		"Tag",
+		"Terminal",
+		"JSLint",
+		"LESS",
+		"Nettuts+ Fetch"
 	],
 	"matchBracketsAngle": true,
 	"rulers":
@@ -22,6 +31,6 @@
 	],
 	"show_minimap": false,
 	"tab_size": 2,
-	"theme": "Flatland Dark.sublime-theme",
+	"theme": "Soda Dark.sublime-theme",
 	"trim_trailing_white_space_on_save": true
 }

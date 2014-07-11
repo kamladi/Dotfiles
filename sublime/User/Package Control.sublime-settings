@@ -1,8 +1,10 @@
 {
+	"auto_upgrade_last_run": null,
 	"installed_packages":
 	[
 		"Alignment",
 		"Backbone.js",
+		"Case Conversion",
 		"CoffeeScript",
 		"Display Functions (Java)",
 		"DocBlockr",
@@ -20,6 +22,8 @@
 		"jQuery",
 		"JSLint",
 		"LaTeXTools",
+		"LESS",
+		"LESS-build",
 		"MacTerminal",
 		"Nettuts+ Fetch",
 		"Origami",
@@ -32,6 +36,9 @@
 		"Solarized Color Scheme",
 		"SublimeCodeIntel",
 		"sublimelint",
+		"SublimeLinter",
+		"SublimeLinter-cppcheck",
+		"SublimeLinter-cpplint",
 		"SublimeREPL",
 		"SystemVerilog",
 		"Tag",

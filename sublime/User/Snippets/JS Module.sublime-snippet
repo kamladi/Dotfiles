@@ -1,0 +1,41 @@
+<snippet>
+	<content><![CDATA[
+/*
+ * ${1:Module}:
+ * (Add description here)
+ */
+var ${1:Module} = (function () {
+
+  var ${1:Module} = function (options) {
+
+    // default options
+    this.options = {
+      key: 'value'
+    };
+
+    // merge the `options` with our defaults
+    for (var key in options) {
+      this.options[key] = options[key];
+    }
+
+  };
+
+
+  /**
+   * Method: (add description here)
+   *
+   */
+  ${1:Module}.prototype.method = function () {
+
+  };
+
+  return ${1:Module};
+
+}());
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>module</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.js</scope>
+</snippet>

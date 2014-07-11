@@ -23,5 +23,5 @@ if [ -f ~/.bash_aliases ]; then
     source ~/.bash_aliases
 fi
 
-# Sublime Text 2 is default editor
-export EDITOR='subl'
+# Vim is default editor
+export EDITOR='vim'
