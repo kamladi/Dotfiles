@@ -116,7 +116,6 @@ link ".vim"             ".vim"
 link ".vimrc"           ".vimrc"
 link ".zshrc"           ".zshrc"
 link "oh-my-zsh"        ".oh-my-zsh"
-link "oh-my-zsh/custom" ".oh-my-zsh/custom"
 
 e_success "Dotfiles update complete!"
 source ${HOME}/.bash_profile
