@@ -1,6 +1,6 @@
 {
 	"auto_complete_commit_on_tab": true,
-	"color_scheme": "Packages/User/Tomorrow-Night-Eighties (SL).tmTheme",
+	"color_scheme": "Packages/User/Monokai (SL).tmTheme",
 	"detect_slow_plugins": false,
 	"ensure_newline_at_eof_on_save": true,
 	"font_face": "Source Code Pro",
@@ -12,16 +12,15 @@
 	"highlight_line": true,
 	"ignored_packages":
 	[
-		"SublimeCodeIntel",
-		"sublimelint",
-		"Solarized Color Scheme",
-		"Papyrus Assembly",
-		"Vintage",
 		"LESS-build",
 		"Tag",
-		"Terminal",
-		"JSLint",
+		"Vintage",
+		"sublimelint",
 		"LESS",
+		"Papyrus Assembly",
+		"Solarized Color Scheme",
+		"JSLint",
+		"SublimeCodeIntel",
 		"Nettuts+ Fetch"
 	],
 	"matchBracketsAngle": true,
@@ -31,6 +30,6 @@
 	],
 	"show_minimap": false,
 	"tab_size": 2,
-	"theme": "Soda Dark.sublime-theme",
+	"theme": "Spacefunk (Grey Tuesday).sublime-theme",
 	"trim_trailing_white_space_on_save": true
 }

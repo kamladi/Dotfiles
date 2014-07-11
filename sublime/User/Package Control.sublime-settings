@@ -24,7 +24,6 @@
 		"LaTeXTools",
 		"LESS",
 		"LESS-build",
-		"MacTerminal",
 		"Nettuts+ Fetch",
 		"Origami",
 		"Package Control",
@@ -39,12 +38,11 @@
 		"SublimeLinter",
 		"SublimeLinter-cppcheck",
 		"SublimeLinter-cpplint",
-		"SublimeREPL",
 		"SystemVerilog",
 		"Tag",
-		"Terminal",
 		"Theme - Flatland",
 		"Theme - Soda",
+		"Theme - Spacefunk",
 		"Tomorrow Color Schemes"
 	]
 }
