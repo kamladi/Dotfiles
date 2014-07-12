@@ -56,8 +56,7 @@ webserver() {
 }
 
 # merge multiple PDFs to one PDF file
-pdfmerge()
-{
+pdfmerge() {
   tomerge="";
   for file in "$@"; do
     tomerge=$tomerge" "$file;
