@@ -64,8 +64,8 @@ nnoremap <leader>ws <C-w>R
 " Move to next split
 nnoremap <Tab> <C-w>w
 
-" Tab for autocomplete in insert mode
-" inoremap <Tab> <C-p>
+" jump 10 spaces down
+noremap <Space> 10j
 
 " matching brackets/quotes
 inoremap {      {}<Left>
