@@ -19,6 +19,7 @@ alias dt="cd ~/Desktop"
 alias dbox="cd ~/Dropbox"
 alias bk="cd -"
 function cdl { cd $1; ls;}
+alias cd="cdl"
 function mcd() { mkdir -p "$1" && cd "$1"; }
 
 # misc aliases
@@ -39,6 +40,9 @@ alias -s rb=subl
 alias -s c=subl
 alias -s sml=subl
 alias -s tex=subl
+
+# shortcut for clean lookup of processes
+function psgrep() { ps aux | grep -v grep | grep "$@" -i --color=auto; }
 
 # run a local server at the current directory
 webserver() {
@@ -72,8 +76,8 @@ alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo 
 
 # git aliases
 alias gs="git status"
-alias gb="git branch"
-alias gc="git commit -m "
+alias gcm="git commit -m"
+alias gcam="git commit -a -m"
 alias gpom='git push origin master'
 alias gd='git diff'
 alias pubkey="more ~/.ssh/id_rsa.public | pbcopy | echo '=> Public key copied to pasteboard.'"
