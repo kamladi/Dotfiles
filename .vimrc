@@ -29,6 +29,10 @@ set shiftround		" always indent/outdent to nearest tabstop
 set expandtab
 set smarttab
 
+" autocomplete config
+set wildmenu 
+set wildmode=longest,list,full
+
 " yank and paste with the system clipboard
 set clipboard=unnamed
 
@@ -62,6 +66,15 @@ nnoremap <Tab> <C-w>w
 
 " Tab for autocomplete in insert mode
 " inoremap <Tab> <C-p>
+
+" matching brackets/quotes
+inoremap {      {}<Left>
+inoremap {<CR>  {<CR>}<Esc>O
+inoremap {}     {}
+inoremap (         ()<Left>
+inoremap <expr> )  strpart(getline('.'), col('.')-1, 1) == ")" ? "\<Right>" : ")"
+inoremap <expr> ' strpart(getline('.'), col('.')-1, 1) == "\'" ? "\<Right>" : "\'\'\<Left>"
+inoremap <expr> " strpart(getline('.'), col('.')-1, 1) == "\"" ? "\<Right>" : "\"\"\<Left>"
 
 " plugin shortcuts
 nnoremap <leader>d :NERDTreeToggle<CR>
