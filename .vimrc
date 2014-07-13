@@ -18,6 +18,7 @@ set showmatch	 " show matching brackets
 set incsearch	 " do incremental searching
 set laststatus=2 " always show status line
 set scrolloff=3  " show context above/below cursorline
+set nowrap       " prevent text wrapping
 
 " Text Formatting/Layout
 set autoindent		" auto-indent
