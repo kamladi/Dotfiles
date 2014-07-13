@@ -2,7 +2,7 @@
 DOTFILES=~/dotfiles
 DOTFILES_OLD=~/dotfiles_old
 
-. ./util.sh
+. ./utils.sh
 
 #
 # Install GCC

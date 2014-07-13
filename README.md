@@ -8,7 +8,8 @@ Note: this installation will replace existing dotfiles in your `$HOME` and `.vim
 	./setup.sh
 	# customize dotfiles...
 
+To update oh-my-zsh and vim plugins, run `./update.sh`
 To uninstall, run `./reset.sh`
 
 ## TODO:
-* add npm packags (express, grunt-cli, etc.)
+* add npm packages (express, grunt-cli, etc.)
