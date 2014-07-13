@@ -26,7 +26,7 @@ if ! cmd_exists 'brew'; then
     ruby -e "$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"
 
     #install important brew packages
-    brew install bash-completion wget mysql node redis lame mongodb sqlite tree zsh
+    cat ./brew_packages | xargs -I pkg brew install pkg 
 fi
 
 
@@ -55,8 +55,8 @@ fi
 # Create the necessary symbolic links between the `.dotfiles` and `HOME`
 # directory. The `bash_profile` sources other files directly from the
 # `.dotfiles` repository.
-e_header "Installing Homebrew..."
-e_header "Note: Existing dotfiles are moved to ~/dotfiles_old." link ".bashrc"          ".bashrc"
+e_header "Note: Existing dotfiles are moved to ~/dotfiles_old." 
+link ".bashrc"          ".bashrc"
 link ".aliases"         ".aliases"
 link ".bash_profile"    ".bash_profile"
 link ".vim"             ".vim"
