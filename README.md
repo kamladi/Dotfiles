@@ -3,11 +3,12 @@
 ## How to Install
 Note: this installation will replace existing dotfiles in your `$HOME` and `.vim` directories, moving any existing dotfiles to a `dotfiles_old` folder.
 
-* Download this repo
-* edit/replace dotfiles with your own schtuff
-* run `./setup.sh` from the command line
+	git clone https://github.com/kamladi/Dotfiles.git ~/dotfiles
+	cd ~/dotfiles
+	./setup.sh
+	# customize dotfiles...
+
+To uninstall, run `./reset.sh`
 
 ## TODO:
-* Add proper Homebrew/NPM setup, installing required packages (node, mongodb, wget, tree, etc.)
-* fill in vimrc, add vim plugins
-* Add in my Sublime Text 2 packages and settings
+* add npm packags (express, grunt-cli, etc.)
