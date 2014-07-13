@@ -48,6 +48,11 @@ cmd_exists() {
 link() {
     # Move existing dotfile to dotfiles_old directory
     if [[ -f ~/${2} ]]; then
+        # create backup folder if it doesn't exist
+        if [[ ! -d $DOTFILES_OLD ]]; then
+            mkdir $DOTFILES_OLD
+        fi
+        # backup old dotfile
         mv ~/${2} ${DOTFILES_OLD}/
     fi
 

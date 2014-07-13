@@ -4,11 +4,6 @@ DOTFILES_OLD=~/dotfiles_old
 
 . ./util.sh
 
-#create backup dotfiles folder if it doesn't exist
-if [[ ! -d $DOTFILES_OLD ]]; then
-    mkdir $DOTFILES_OLD
-fi
-
 
 
 # Before relying on Homebrew, check that packages can be compiled
