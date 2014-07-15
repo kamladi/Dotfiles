@@ -2,7 +2,7 @@
 
 e_header "Cleaning up..."
 
-files=( ".aliases" ".bashrc" ".bash_profile" ".vim" ".vimrc" ".zshrc" ".oh-my-zsh" )
+files=( ".aliases" ".bashrc" ".bash_profile" ".vim" ".vimrc" ".zshrc" ".zlogin" ".zlogout" ".zpreztorc" ".zprofile" ".zshenv" )
 for file in "${files[@]}"; do
 	path="${HOME}/${file}"
 	if [[ -L $path ]]; then

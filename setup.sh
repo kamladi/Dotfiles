@@ -26,8 +26,10 @@ if ! cmd_exists 'brew'; then
 fi
 
 #install important brew packages
-cat ./brew_packages | xargs -I pkg brew install pkg
-
+confirm "Install homebrew packages?"
+if is_confirmed; then
+    cat ./brew_packages | xargs -I pkg brew install pkg
+fi
 
 #
 # Install git
@@ -41,26 +43,24 @@ if ! cmd_exists 'git'; then
 fi
 
 #
-# Install Oh-my-zsh
+# Install Prezto
 #
-# Setup Oh-My-Zsh if it isn't already present
-url="http://github.com/michaeljsmalley/oh-my-zsh.git"
-if [[ -d ${DOTFILES}/oh-my-zsh/ ]]; then
-    cd ${DOTFILES}/oh-my-zsh
-    git pull
-else
-    git clone $url
+url="https://github.com/sorin-ionescu/prezto"
+if [[ ! -d $HOME/.zprezto ]]; then
+    git clone --recursive $url ~/.zprezto
 fi
-
 
 # Set the default shell to zsh if it isn't currently set to zsh
 if [[ ! $(echo $SHELL) == $(which zsh) ]]; then
     chsh -s $(which zsh)
 fi
 
-# Create the necessary symbolic links between the `.dotfiles` and `HOME`
-# directory. The `bash_profile` sources other files directly from the
-# `.dotfiles` repository.
+# symlink default prezto rc files
+for rcfile in "zlogin" "zlogout" "zprofile" "zshenv" ; do      
+    ln -s "${HOME}/.zprezto/runcoms/$rcfile" "${HOME}/.${rcfile:t}"
+done
+
+# Override symlinks with your our custom rc files
 e_header "Note: Existing dotfiles are moved to ~/dotfiles_old."
 link ".bashrc"          ".bashrc"
 link ".aliases"         ".aliases"
@@ -68,7 +68,6 @@ link ".bash_profile"    ".bash_profile"
 link ".vim"             ".vim"
 link ".vimrc"           ".vimrc"
 link ".zshrc"           ".zshrc"
-link "oh-my-zsh"        ".oh-my-zsh"
+link ".zpreztorc"      ".zpreztorc"
 
-e_success "Dotfiles update complete!"
-source ${HOME}/.zshrc
+e_success "Dotfiles update complete! Restart your shell now..."

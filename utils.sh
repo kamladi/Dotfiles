@@ -57,6 +57,6 @@ link() {
     fi
 
     # Create new symlink.
-    ln -s ${DOTFILES}/${1} ~/${2}
+    ln -nsf ${DOTFILES}/${1} ~/${2}
 }
 
