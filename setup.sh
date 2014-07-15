@@ -45,11 +45,11 @@ fi
 #
 # Setup Oh-My-Zsh if it isn't already present
 url="http://github.com/michaeljsmalley/oh-my-zsh.git"
-if [[ -d ${DOTFILES}/oh-my-zsh/ ]]; then
-    cd ${DOTFILES}/oh-my-zsh
+if [[ -d ${HOME}/oh-my-zsh ]]; then
+    cd ${HOME}/oh-my-zsh
     git pull
 else
-    git clone $url
+    git clone $url $HOME/oh-my-zsh
 fi
 
 
@@ -68,7 +68,6 @@ link ".bash_profile"    ".bash_profile"
 link ".vim"             ".vim"
 link ".vimrc"           ".vimrc"
 link ".zshrc"           ".zshrc"
-link "oh-my-zsh"        ".oh-my-zsh"
 
 e_success "Dotfiles update complete!"
 source ${HOME}/.zshrc
