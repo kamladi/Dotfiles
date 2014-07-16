@@ -87,10 +87,17 @@ nnoremap <leader>T :CtrlPClearCache<CR>:CtrlP<CR>
 " plugin settings
 let g:ctrlp_match_window = 'order:ttb,max:20'
 let g:NERDSpaceDelims=1
-" let airline use custom powerline symbols
-let g:airline_powerline_fonts=1
 " patch for airline symbol spacing issue
 if !exists('g:airline_symbols')
       let g:airline_symbols = {}
   endif
 let g:airline_symbols.space = "\ua0"
+" let airline use old vim-powerline symbols
+let g:airline_left_sep = '⮀'
+let g:airline_left_alt_sep = '⮁'
+let g:airline_right_sep = '⮂'
+let g:airline_right_alt_sep = '⮃'
+let g:airline_symbols.branch = '⭠'
+let g:airline_symbols.readonly = '⭤'
+let g:airline_symbols.linenr = '⭡'
+

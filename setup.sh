@@ -70,4 +70,8 @@ link ".vimrc"           ".vimrc"
 link ".zshrc"           ".zshrc"
 link ".zpreztorc"      ".zpreztorc"
 
+# download "paradox" prompt theme
+paradox_url="https://raw.githubusercontent.com/paradox460/prezto/paradox/modules/prompt/functions/prompt_paradox_setup"
+curl $paradox_url -o "~/.zprezto/modules/prompt/functions/prompt_paradox_setup"
+
 e_success "Dotfiles update complete! Restart your shell now..."
