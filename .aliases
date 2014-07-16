@@ -17,6 +17,8 @@ alias ~="cd ~"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias dbox="cd ~/Dropbox"
+alias ls="ls -Gp"
+alias lsa="ls -A"
 alias bk="cd -"
 function cdl { cd $1; ls;}
 alias cd="cdl"
