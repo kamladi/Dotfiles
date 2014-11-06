@@ -31,10 +31,16 @@ export PATH="/Users/kamladi/adt/sdk/tools:/Users/kamladi/adt/sdk/platform-tools:
 # MATLAB
 export PATH="/Applications/MATLAB_R2013a.app/bin:$PATH"
 
+# Golang
+export PATH=$PATH:/usr/local/go/bin
+export GOPATH=/Users/kamladi/go
+
 # Amazon EC2 CLI setup
 export JAVA_HOME=$(/usr/libexec/java_home)
-export EC2_HOME=/usr/local/ec2-api-tools-1.6.12.2
+export EC2_HOME=/usr/local/ec2/ec2-api-tools-1.7.1.1
 export PATH=$PATH:$EC2_HOME/bin
+export AWS_ACCESS_KEY='AKIAJTSDK4AFNQQICIYQ'
+export AWS_SECRET_KEY='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'
 
 # custom ls colors
 export LSCOLORS="exfxcxdxbxbxbxbxbxbxbx"
