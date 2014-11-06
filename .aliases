@@ -6,9 +6,11 @@ alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 #folder/remote server shortcuts
 CMU="/Users/kamladi/Dropbox/CMU"
 alias cmu="cd $CMU"
-JUNIOR="$CMU/Junior Spring"
+SENIOR="$CMU/Senior Fall"
 UNIX="kamladi@unix.andrew.cmu.edu"
 ECE="kamladi@ece005.ece.cmu.edu"
+437="$SENIOR/15-437/kamladi"
+349="$Seinor/349/"
 
 # filesystem shortcuts
 alias ..="cd .."
@@ -86,6 +88,10 @@ alias pubkey="more ~/.ssh/id_rsa.public | pbcopy | echo '=> Public key copied to
 # python webapp aliases
 alias runserver="python manage.py runserver"
 alias syncdb="python manage.py syncdb"
+
+# Postgres shortcuts
+alias pg_start="postgres -D /usr/local/var/postgres"
+alias ps_stop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
 
 # virtualenv command shortcut
 alias sourceproj="source venv/bin/activate"
