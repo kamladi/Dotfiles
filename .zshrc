@@ -39,8 +39,6 @@ export GOPATH=/Users/kamladi/go
 export JAVA_HOME=$(/usr/libexec/java_home)
 export EC2_HOME=/usr/local/ec2/ec2-api-tools-1.7.1.1
 export PATH=$PATH:$EC2_HOME/bin
-export AWS_ACCESS_KEY='AKIAJTSDK4AFNQQICIYQ'
-export AWS_SECRET_KEY='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'
 
 # custom ls colors
 export LSCOLORS="exfxcxdxbxbxbxbxbxbxbx"
