@@ -34,6 +34,7 @@ export PATH="/Applications/MATLAB_R2013a.app/bin:$PATH"
 # Golang
 export PATH=$PATH:/usr/local/go/bin
 export GOPATH=/Users/kamladi/go
+export PATH=$PATH:/$GOPATH/bin
 
 # Amazon EC2 CLI setup
 export JAVA_HOME=$(/usr/libexec/java_home)

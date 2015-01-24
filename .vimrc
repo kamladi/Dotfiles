@@ -55,6 +55,10 @@ noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
 
+"" open split panes to right/bottom
+set splitbelow
+set splitright
+
 " Moving splits
 nnoremap <leader>wh <C-w>H
 nnoremap <leader>wj <C-w>J
@@ -65,17 +69,9 @@ nnoremap <leader>ws <C-w>R
 " Move to next split
 nnoremap <Tab> <C-w>w
 
-" jump 10 spaces down
+" jump 10 spaces down/up
 noremap <Space> 10j
-
-" matching brackets/quotes
-inoremap {      {}<Left>
-inoremap {<CR>  {<CR>}<Esc>O
-inoremap {}     {}
-inoremap (         ()<Left>
-inoremap <expr> )  strpart(getline('.'), col('.')-1, 1) == ")" ? "\<Right>" : ")"
-inoremap <expr> ' strpart(getline('.'), col('.')-1, 1) == "\'" ? "\<Right>" : "\'\'\<Left>"
-inoremap <expr> " strpart(getline('.'), col('.')-1, 1) == "\"" ? "\<Right>" : "\"\"\<Left>"
+noremap <BS> 10k
 
 " plugin shortcuts
 nnoremap <leader>d :NERDTreeToggle<CR>

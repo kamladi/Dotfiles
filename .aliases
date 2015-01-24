@@ -10,7 +10,7 @@ SENIOR="$CMU/Senior Fall"
 UNIX="kamladi@unix.andrew.cmu.edu"
 ECE="kamladi@ece005.ece.cmu.edu"
 437="$SENIOR/15-437/kamladi"
-349="$Seinor/349/"
+349="$SENIOR/349/"
 
 # filesystem shortcuts
 alias ..="cd .."
@@ -78,6 +78,8 @@ mp3() {
 alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl"
 
 # git aliases
+alias gl="git pull"
+alias glog="git log"
 alias gs="git status"
 alias gcm="git commit -m"
 alias gcam="git commit -a -m"
