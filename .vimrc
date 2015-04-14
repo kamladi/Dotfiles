@@ -55,7 +55,7 @@ noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
 
-"" open split panes to right/bottom
+"" open new split panes to right/bottom
 set splitbelow
 set splitright
 
@@ -73,12 +73,16 @@ nnoremap <Tab> <C-w>w
 noremap <Space> 10j
 noremap <BS> 10k
 
+" Ctrl-Tab rotates btwn buffers (recently edited files)
+nmap <C-Tab> :bnext
+
 " plugin shortcuts
 nnoremap <leader>d :NERDTreeToggle<CR>
 nnoremap <leader>f :NERDTreeFind<CR>
 nnoremap <leader>t :CtrlP<CR>
 nnoremap <leader>b :CtrlPBuffer<CR>
 nnoremap <leader>T :CtrlPClearCache<CR>:CtrlP<CR>
+nmap <slient> <leader>r :TagbarToggle<CR>
 
 " plugin settings
 let g:ctrlp_match_window = 'order:ttb,max:20'
@@ -89,11 +93,7 @@ if !exists('g:airline_symbols')
   endif
 let g:airline_symbols.space = "\ua0"
 " let airline use old vim-powerline symbols
-let g:airline_left_sep = '⮀'
-let g:airline_left_alt_sep = '⮁'
-let g:airline_right_sep = '⮂'
-let g:airline_right_alt_sep = '⮃'
-let g:airline_symbols.branch = '⭠'
-let g:airline_symbols.readonly = '⭤'
-let g:airline_symbols.linenr = '⭡'
-
+let g:airline_powerline_fonts = 1
+let g:easytags_events = ['BufReadPost', 'BufWritePost']
+let g:easytags_async = 1
+let g:easytags_supress_report = 1

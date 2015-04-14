@@ -36,6 +36,9 @@ export PATH=$PATH:/usr/local/go/bin
 export GOPATH=/Users/kamladi/go
 export PATH=$PATH:/$GOPATH/bin
 
+# LaTeX
+export PATH=$PATH:/usr/texbin
+
 # Amazon EC2 CLI setup
 export JAVA_HOME=$(/usr/libexec/java_home)
 export EC2_HOME=/usr/local/ec2/ec2-api-tools-1.7.1.1

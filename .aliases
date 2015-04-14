@@ -6,11 +6,12 @@ alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 #folder/remote server shortcuts
 CMU="/Users/kamladi/Dropbox/CMU"
 alias cmu="cd $CMU"
-SENIOR="$CMU/Senior Fall"
+SENIOR="$CMU/Senior Spring"
 UNIX="kamladi@unix.andrew.cmu.edu"
 ECE="kamladi@ece005.ece.cmu.edu"
-437="$SENIOR/15-437/kamladi"
-349="$SENIOR/349/"
+GHC="kamladi@ghc30.ghc.andrew.cmu.edu"
+PROB="$SENIOR/Probability"
+349="$SENIOR/848/"
 
 # filesystem shortcuts
 alias ..="cd .."
