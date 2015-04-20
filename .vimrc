@@ -16,6 +16,7 @@ set number 		 " show line numbers
 set cul			 " highlight current line
 set showmatch	 " show matching brackets
 set incsearch	 " do incremental searching
+set hlsearch     " highlight search results
 set laststatus=2 " always show status line
 set scrolloff=3  " show context above/below cursorline
 set nowrap       " prevent text wrapping
@@ -72,6 +73,9 @@ nnoremap <Tab> <C-w>w
 " jump 10 spaces down/up
 noremap <Space> 10j
 noremap <BS> 10k
+
+" Type underscore to clear highlighted search results
+nnoremap <silent> _ :nohl<CR>
 
 " Ctrl-Tab rotates btwn buffers (recently edited files)
 nmap <C-Tab> :bnext

@@ -11,7 +11,8 @@ UNIX="kamladi@unix.andrew.cmu.edu"
 ECE="kamladi@ece005.ece.cmu.edu"
 GHC="kamladi@ghc30.ghc.andrew.cmu.edu"
 PROB="$SENIOR/Probability"
-349="$SENIOR/848/"
+848="$SENIOR/848/"
+418="$SENIOR/418/"
 
 # filesystem shortcuts
 alias ..="cd .."
