@@ -13,6 +13,7 @@ colorscheme Tomorrow-Night-Eighties
 
 " Vim UI
 set number 		 " show line numbers
+set relativenumber
 set cul			 " highlight current line
 set showmatch	 " show matching brackets
 set incsearch	 " do incremental searching
@@ -50,6 +51,12 @@ if exists('$TMUX')  " Support resizing in tmux
   set ttymouse=xterm2
 endif
 
+" Set <Leader> to ,
+let mapleader = ","
+
+" Type semicolon instead of colon for normal mode commands
+nnoremap ; :
+
 " Switching between splits
 noremap <C-h> <C-w>h
 noremap <C-j> <C-w>j
@@ -73,6 +80,10 @@ nnoremap <Tab> <C-w>w
 " jump 10 spaces down/up
 noremap <Space> 10j
 noremap <BS> 10k
+
+" Use Enter/Shift-Enter to insert newlines (before/after)
+" in Normal Mode
+nmap <CR> o<Esc>
 
 " Type underscore to clear highlighted search results
 nnoremap <silent> _ :nohl<CR>

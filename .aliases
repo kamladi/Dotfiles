@@ -27,6 +27,7 @@ alias bk="cd -"
 function cdl { cd $1; ls;}
 alias cd="cdl"
 function mcd() { mkdir -p "$1" && cd "$1"; }
+alias ql="qlmanage -p"
 
 # misc aliases
 alias myip='curl ip.appspot.com'
@@ -103,3 +104,6 @@ alias sourceproj="source venv/bin/activate"
 # AWS stchuff
 aws_key=~/.ssh/aws_key.pem
 alias ssh-aws="ssh -i $aws_key"
+
+# Latex shortcuts
+function makelatex() { pdflatex ${1}.tex && bibtex ${1} && pdflatex ${1}.tex && pdflatex ${1}.tex }
