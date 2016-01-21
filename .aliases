@@ -7,8 +7,6 @@ alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 CMU="/Users/kamladi/Dropbox/CMU"
 alias cmu="cd $CMU"
 GRAD="/Users/kamladi/Google Drive/"
-649="$GRAD/18-649/18649-team1"
-MPC="mpcuser@128.2.81.201"
 UNIX="kamladi@unix.andrew.cmu.edu"
 ECE="kamladi@ece000.ece.cmu.edu"
 GHC="kamladi@ghc30.ghc.andrew.cmu.edu"
@@ -36,18 +34,10 @@ alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.ar
 alias dec2hex='printf "%x\n" $1'
 alias hex2dec='printf "%d\n" 0x$1'
 alias ccat='pygmentize -O bg=dark'
+alias cat='ccat'
 alias stfu="osascript -e 'set volume output muted true'"
 alias pumpit="osascript -e 'set volume 7'"
 alias chrome="open -a Google\ Chrome"
-
-# ZSH suffix aliases to open files with Sublime Text
-alias -s js=subl
-alias -s html=subl
-alias -s css=subl
-alias -s rb=subl
-alias -s c=subl
-alias -s sml=subl
-alias -s tex=subl
 
 # shortcut for clean lookup of processes
 function psgrep() { ps aux | grep -v grep | grep "$@" -i --color=auto; }
@@ -93,7 +83,7 @@ alias syncdb="python manage.py syncdb"
 
 # Postgres shortcuts
 alias pg_start="postgres -D /usr/local/var/postgres"
-alias ps_stop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
+alias pg_stop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
 
 # virtualenv command shortcut
 alias sourceproj="source venv/bin/activate"
