@@ -31,10 +31,12 @@ zstyle ':prezto:load' pmodule \
   'history' \
   'directory' \
   'spectrum' \
-  'completion' \
-  'prompt' \
   'git' \
-  'node'
+  'node' \
+  'completion' \
+  'syntax-highlighting' \
+  'history-substring-search' \
+  'prompt' \
 
 #
 # Editor
@@ -116,15 +118,17 @@ zstyle ':prezto:module:editor' dot-expansion 'yes'
 #
 # Syntax Highlighting
 #
+zstyle ':prezto:module:syntax-highlighting' color 'yes'
 
 # Set syntax highlighters.
 # By default, only the main highlighter is enabled.
-# zstyle ':prezto:module:syntax-highlighting' highlighters \
-#   'main' \
-#   'brackets' \
-#   'pattern' \
-#   'cursor' \
-#   'root'
+zstyle ':prezto:module:syntax-highlighting' highlighters \
+   'main' \
+   'brackets' \
+   'pattern' \
+   'cursor' \
+   'root'
+
 #
 # Set syntax highlighting styles.
 # zstyle ':prezto:module:syntax-highlighting' styles \

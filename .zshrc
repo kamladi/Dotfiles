@@ -3,7 +3,16 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
     source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-# Customize to your needs...
+# why would you type 'cd dir' if you could just type 'dir'?
+setopt AUTO_CD
+
+# enable 'thefuck' plugin to autocorrect mistyped commands
+eval "$(thefuck --alias)"
+
+# enable 'z.sh': jumps to most 'frecent' directory
+. ~/z/z.sh
+
+## Customize to your needs...
 export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/share/npm/bin:/usr/local/bin:/usr/local/share/python:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/libexec:/Users/kamladi/.rvm/bin
 
 export PATH="/usr/local/bin:/usr/local/share/python:$PATH"
@@ -30,6 +39,13 @@ export PATH="/Users/kamladi/adt/sdk/tools:/Users/kamladi/adt/sdk/platform-tools:
 
 # MATLAB
 export PATH="/Applications/MATLAB_R2013a.app/bin:$PATH"
+
+# Library Python libs
+export PATH="/Library/Frameworks/Python.framework/Versions/Current/bin:$PATH"
+export PATH="/Library/Python/2.7/site-packages/:$PATH"
+
+# AVR-GCC Paths
+export PATH="/usr/local/CrossPack-AVR/bin:$PATH"
 
 # Golang
 export PATH=$PATH:/usr/local/go/bin

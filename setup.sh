@@ -56,7 +56,7 @@ if [[ ! $(echo $SHELL) == $(which zsh) ]]; then
 fi
 
 # symlink default prezto rc files
-for rcfile in "zlogin" "zlogout" "zprofile" "zshenv" ; do      
+for rcfile in "zlogin" "zlogout" "zprofile" "zshenv" ; do
     ln -s "${HOME}/.zprezto/runcoms/$rcfile" "${HOME}/.${rcfile:t}"
 done
 
@@ -68,7 +68,8 @@ link ".bash_profile"    ".bash_profile"
 link ".vim"             ".vim"
 link ".vimrc"           ".vimrc"
 link ".zshrc"           ".zshrc"
-link ".zpreztorc"      ".zpreztorc"
+link ".zpreztorc"       ".zpreztorc"
+link "z"                "z"
 
 # download "paradox" prompt theme
 paradox_url="https://raw.githubusercontent.com/paradox460/prezto/paradox/modules/prompt/functions/prompt_paradox_setup"

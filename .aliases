@@ -6,13 +6,13 @@ alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 #folder/remote server shortcuts
 CMU="/Users/kamladi/Dropbox/CMU"
 alias cmu="cd $CMU"
-SENIOR="$CMU/Senior Spring"
+GRAD="/Users/kamladi/Google Drive/"
+649="$GRAD/18-649/18649-team1"
+MPC="mpcuser@128.2.81.201"
 UNIX="kamladi@unix.andrew.cmu.edu"
-ECE="kamladi@ece005.ece.cmu.edu"
+ECE="kamladi@ece000.ece.cmu.edu"
 GHC="kamladi@ghc30.ghc.andrew.cmu.edu"
-PROB="$SENIOR/Probability"
-848="$SENIOR/848/"
-418="$SENIOR/418/"
+MATLAB="/Users/kamladi/Documents/MATLAB"
 
 # filesystem shortcuts
 alias ..="cd .."
@@ -38,6 +38,7 @@ alias hex2dec='printf "%d\n" 0x$1'
 alias ccat='pygmentize -O bg=dark'
 alias stfu="osascript -e 'set volume output muted true'"
 alias pumpit="osascript -e 'set volume 7'"
+alias chrome="open -a Google\ Chrome"
 
 # ZSH suffix aliases to open files with Sublime Text
 alias -s js=subl
@@ -71,11 +72,6 @@ pdfmerge() {
   pdftk $tomerge cat output mergd.pdf;
 }
 
-# download youtube video to mp3 audio file
-mp3() {
-  youtube-dl $1 --extract-audio --title --audio-format mp3
-}
-
 # Empty the Trash on all mounted volumes and the main HDD
 # Also, clear Apple’s System Logs to improve shell startup speed
 alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl"
@@ -87,6 +83,7 @@ alias gs="git status"
 alias gcm="git commit -m"
 alias gcam="git commit -a -m"
 alias gpom='git push origin master'
+alias gphm='git push heroku master'
 alias gd='git diff'
 alias pubkey="more ~/.ssh/id_rsa.public | pbcopy | echo '=> Public key copied to pasteboard.'"
 
@@ -102,8 +99,12 @@ alias ps_stop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
 alias sourceproj="source venv/bin/activate"
 
 # AWS stchuff
-aws_key=~/.ssh/aws_key.pem
-alias ssh-aws="ssh -i $aws_key"
+aws_key="~/.ssh/aws_key.pem"
+EC2=ubuntu@52.88.159.129
+alias ssh-aws="ssh -i ${aws_key}"
 
 # Latex shortcuts
 function makelatex() { pdflatex ${1}.tex && bibtex ${1} && pdflatex ${1}.tex && pdflatex ${1}.tex }
+
+# Matlab shortcuts
+alias matlab="/Applications/MATLAB_R2015a.app/bin/matlab -nojvm -nodisplay -nosplash"

@@ -52,6 +52,10 @@ set backspace=indent,eol,start
 " Write the old file out when switching between files
 set autowrite
 
+" Don't save a swapfile/backup when editing a file in vim.
+set noswapfile
+set nobackup
+
 " Enable basic mouse behavior such as resizing buffers.
 set mouse=a
 if exists('$TMUX')  " Support resizing in tmux
@@ -80,6 +84,8 @@ nnoremap <leader>wl <C-w>L
 nnoremap <leader>ws <C-w>R
 " Move to next split
 nnoremap <Tab> <C-w>w
+" Move to next tab
+nnoremap tn gt
 
 " jump 10 spaces down/up
 noremap <Space> 10j
@@ -126,6 +132,7 @@ let g:airline_powerline_fonts = 1
 let g:easytags_events = ['BufReadPost', 'BufWritePost']
 let g:easytags_async = 1
 let g:easytags_supress_report = 1
+let g:airline#extensions#tabline#enabled = 1
 
 " LaTeX-Box settings
 let g:LatexBox_latexmk_async = 0
